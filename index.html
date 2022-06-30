@@ -8,7 +8,7 @@
   <title>Doces - Pâtissier</title>
 </head>
 <body>
-  <div class="box-geral box-login">
+  <div class="box-geral box-login" data-js="box-principal">
     <section class="box-logo">
       <img src="assets/imagens/logo.png" alt="Logo Doces Pâtissier">
     </section>
@@ -22,9 +22,9 @@
         </div>
       </button>
 
-      <button class="btn btn-criar-conta">
-        <div class="loading"></div>
-        <a href="#" target="_self">Log in</a>
+      <button class="btn btn-criar-conta" data-js="botao-login">
+        <div class="loading loading-login" data-js="loading-login"></div>
+        <a href="#" target="_self" data-js="cont-login">Log in</a>
       </button>
     </section>
   </div>
@@ -52,17 +52,17 @@
           <input type="password" id="senha" name="user-password" placeholder="Enter password...">
         </label>
     
-        <button type="submit" class="btn btn-login">
-          <div class="loading"></div>
+        <button type="submit" class="btn btn-criar-conta" data-js="cont-signup">
+          <div class="loading" data-js="loading-signup"></div>
           Sign up
         </button>
       </form>
     </div>
 
     <div class="box-btn btn-possui-conta">
-      <button class="btn">
-        <div class="loading"></div>
-        <a href="#" target="_self">Already have an account?</a>
+      <button class="btn btn-criar-conta" data-js="botao-login">
+        <div class="loading loading-login"></div>
+        <a href="#" target="_self" data-js="cont-login">Already have an account?</a>
       </button>
     </div>
   </div>
@@ -91,7 +91,7 @@
         </label>
     
         <button type="submit" class="btn btn-login">
-          <div class="loading"></div>
+          <div class="loading loading-login"></div>
           Login
         </button>
         <a href="#" class="recuperar-senha">Forgot Password?</a>
@@ -100,9 +100,9 @@
     </div>
 
     <div class="box-btn btn-possui-conta">
-      <button class="btn">
-        <div class="loading"></div>
-        <a href="#" target="_self">Sign Up</a>
+      <button class="btn btn-criar-conta" data-js="botao-se-inscrever">
+        <div class="loading loading-signup" data-js="loading-signup"></div>
+        <a href="#" target="_self" data-js="cont-signup">Sign Up</a>
       </button>
     </div>
   </div>

@@ -26,6 +26,7 @@ body {
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
+  transition: 1s;
 }
 
 .box-login {
@@ -39,6 +40,15 @@ body {
   top: 0;
   left: 2000px;
   transition: 1s;
+}
+
+.box-geral-form-login {
+  background: white;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 2000px;
+  transition: 1s
 }
 
 .box-titulo-sign-up {
@@ -151,6 +161,12 @@ body {
   border-top-color: #862924;
   border-radius: 50%;
   animation: carregando 1s infinite;
+}
+
+.loading-login,
+.loading-signup {
+  width: 9px;
+  height: 9px;
 }
 
 @keyframes carregando {
