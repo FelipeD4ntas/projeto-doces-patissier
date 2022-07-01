@@ -6,6 +6,8 @@ const boxPrincipal = document.querySelector('[data-js="box-principal"]');
 const formInscricao = document.querySelector('[data-js="form-se-inscrever"]');
 const formLogin = document.querySelector('[data-js="form-login"]');
 
+let index = 1;
+
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js';
 
@@ -22,20 +24,44 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 function clicouBtnInscricao() {
+  index = 1
+  ++index
   
   setTimeout(() => {
-    boxFormSeInscrever.style.left = '0';
-    boxFormLogin.style.right = '2000px';
-    boxPrincipal.style.opacity = '0';
+    switch (index) {
+      case 1: 
+        boxPrincipal.style.right = '0%';
+        break
+      case 2: 
+        boxFormLogin.style.left = '100%';
+        boxFormSeInscrever.style.right = '0%';
+        break
+      case 3: 
+        boxFormLogin.style.left = '0%';
+        boxFormSeInscrever.style.right = '100%';
+        break
+    }
   }, 500);
 };
 
 function clicouBtnLogin() {
-
+  index = 1
+  index += 2
+ 
   setTimeout(() => {
-    boxFormSeInscrever.style.left = '2000px';
-    boxFormLogin.style.right = '0';
-    boxPrincipal.style.opacity = '0';
+    switch (index) {
+      case 1: 
+        boxPrincipal.style.right = '0%';
+        break
+      case 2: 
+        boxFormLogin.style.left = '100%';
+        boxFormSeInscrever.style.right = '0%';
+        break
+      case 3: 
+        boxFormLogin.style.left = '0%';
+        boxFormSeInscrever.style.right = '100%';
+        break
+    }
   }, 500);
 };
 
@@ -79,13 +105,16 @@ function logar(event) {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
- 
+      
       if (errorMessage === 'Firebase: Error (auth/user-not-found).') {
         alert('Usuário não encontrado.');
-      }
+      };
       if (errorMessage === 'Firebase: Error (auth/wrong-password).') {
         alert('Senha errada!');
-      }
+      };
+      if (errorMessage === 'Firebase: Error (auth/invalid-email).') {
+        alert('Email inválido');
+      };
     });
 }
 

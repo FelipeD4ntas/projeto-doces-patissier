@@ -27,28 +27,21 @@ body {
   justify-content: space-between;
   overflow: hidden;
   transition: 1s;
-}
-
-.box-login {
-  position: relative;
-}
-
-.box-geral-form {
-  background: white;
-  width: 100%;
   position: absolute;
-  top: 0;
-  left: 2000px;
-  transition: 1s;
+  width: 100%;
+  background: white;
 }
 
-.box-geral-form-login {
-  background: white;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 2000px;
-  transition: 1s
+.box-principal {
+  right: 0%;
+}
+
+.box-form-inscricao {
+  right: 100%;
+}
+
+.box-form-login {
+  left: 100%;
 }
 
 .box-titulo-sign-up {

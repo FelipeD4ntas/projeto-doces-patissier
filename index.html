@@ -8,97 +8,94 @@
   <title>Doces - Pâtissier</title>
 </head>
 <body>
-  <div class="box-geral box-login" data-js="box-principal">
-    <section class="box-logo">
-      <img src="assets/imagens/logo.png" alt="Logo Doces Pâtissier">
-    </section>
-
-    <section class="box-btn">
-      <button class="btn btn-login" data-js="botao-se-inscrever">
-        <div class="signup" data-js="cont-signup">
-          <img src="assets/imagens/icones/icone-restaurante.svg" alt="icone Menu Restaurante">
-          <a href="#" target="_self">Sign up</a>
-        </div>
-      </button>
-
-      <button class="btn btn-criar-conta" data-js="botao-login">
-        <a href="#" target="_self" data-js="cont-login">Log in</a>
-      </button>
-    </section>
-  </div>
-
-  <div class="box-geral box-geral-form" data-js="box-form-inscricao">
-    <div class="box-titulo-sign-up">
-      <div class="bolinha"></div>
-      <div class="bolinha"></div>
-      <div class="bolinha"></div>
-      <h1>Sign up</h1>
-      <div class="bolinha"></div>
-      <div class="bolinha"></div>
-      <div class="bolinha"></div>
-    </div>
-      
-    <div class="box-form">
-      <form class="form-se-inscrever" data-js="form-se-inscrever">
-        <label for="emailInscricao">
-          Email
-          <input type="email" id="emailInscricao" name="user-email" placeholder="Enter email...">
-        </label>
-        
-        <label for="senhaInscricao">
-          Password  
-          <input type="password" id="senhaInscricao" name="user-password" placeholder="Enter password...">
-        </label>
-    
-        <button type="submit" class="btn btn-criar-conta" data-js="cont-signup">
-
-          Sign up
+  <div class="box-telas">
+    <div class="box-geral box-principal" data-js="box-principal">
+      <section class="box-logo">
+        <img src="assets/imagens/logo.png" alt="Logo Doces Pâtissier">
+      </section>
+      <section class="box-btn">
+        <button class="btn btn-login" data-js="botao-se-inscrever">
+          <div class="signup" data-js="cont-signup">
+            <img src="assets/imagens/icones/icone-restaurante.svg" alt="icone Menu Restaurante">
+            <a href="#" target="_self">Sign up</a>
+          </div>
         </button>
-      </form>
-    </div>
-
-    <div class="box-btn btn-possui-conta">
-      <button class="btn btn-criar-conta" data-js="botao-login">
-        <a href="#" target="_self" data-js="cont-login">Already have an account?</a>
-      </button>
-    </div>
-  </div>
-
-<div class="box-geral box-geral-form-login" data-js="box-form-login">
-    <div class="box-titulo-sign-up">
-      <div class="bolinha"></div>
-      <div class="bolinha"></div>
-      <div class="bolinha"></div>
-      <h1>Login</h1>
-      <div class="bolinha"></div>
-      <div class="bolinha"></div>
-      <div class="bolinha"></div>
-    </div>
-      
-    <div class="box-form">
-      <form class="form-se-inscrever" data-js="form-login">
-        <label for="emailLogin">
-          Email
-          <input type="email" id="emailLogin" name="user-email" placeholder="Enter email...">
-        </label>
-        
-        <label for="senhaLogin">
-          Password  
-          <input type="password" id="senhaLogin" name="user-password" placeholder="Enter password...">
-        </label>
-    
-        <button type="submit" class="btn btn-login">
-          Login
+        <button class="btn btn-criar-conta" data-js="botao-login">
+          <a href="#" target="_self" data-js="cont-login">Log in</a>
         </button>
-        <a href="#" class="recuperar-senha">Forgot Password?</a>
-      </form>
-      
+      </section>
     </div>
 
-    <div class="box-btn btn-possui-conta">
-      <button class="btn btn-criar-conta" data-js="botao-se-inscrever">
-        <a href="#" target="_self" data-js="cont-signup">Sign Up</a>
-      </button>
+    <div class="box-geral box-form-inscricao" data-js="box-form-inscricao">
+      <div class="box-titulo-sign-up">
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <h1>Sign up</h1>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+      </div>
+    
+      <div class="box-form">
+        <form class="form-se-inscrever" data-js="form-se-inscrever">
+          <label for="emailInscricao">
+            Email
+            <input type="email" id="emailInscricao" name="user-email" placeholder="Enter email...">
+          </label>
+    
+          <label for="senhaInscricao">
+            Password
+            <input type="password" id="senhaInscricao" name="user-password" placeholder="Enter password...">
+          </label>
+    
+          <button type="submit" class="btn btn-criar-conta" data-js="cont-signup">
+            Sign up
+          </button>
+        </form>
+      </div>
+      <div class="box-btn btn-possui-conta">
+        <button class="btn btn-criar-conta" data-js="botao-login">
+          <a href="#" target="_self" data-js="cont-login">Already have an account?</a>
+        </button>
+      </div>
+    </div>
+    
+    <div class="box-geral box-form-login" data-js="box-form-login">
+      <div class="box-titulo-sign-up">
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <h1>Login</h1>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+        <div class="bolinha"></div>
+      </div>
+    
+      <div class="box-form">
+        <form class="form-se-inscrever" data-js="form-login">
+          <label for="emailLogin">
+            Email
+            <input type="email" id="emailLogin" name="user-email" placeholder="Enter email...">
+          </label>
+    
+          <label for="senhaLogin">
+            Password
+            <input type="password" id="senhaLogin" name="user-password" placeholder="Enter password...">
+          </label>
+    
+          <button type="submit" class="btn btn-login">
+            Login
+          </button>
+          <a href="#" class="recuperar-senha">Forgot Password?</a>
+        </form>
+    
+      </div>
+      <div class="box-btn btn-possui-conta">
+        <button class="btn btn-criar-conta" data-js="botao-se-inscrever">
+          <a href="#" target="_self" data-js="cont-signup">Sign Up</a>
+        </button>
+      </div>
     </div>
   </div>
 
