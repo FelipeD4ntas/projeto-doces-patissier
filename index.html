@@ -87,7 +87,7 @@
           <button type="submit" class="btn btn-login">
             Login
           </button>
-          <a href="#" class="recuperar-senha">Forgot Password?</a>
+          <a href="#" class="recuperar-senha" data-js="btn-esqueceu-senha">Forgot Password?</a>
         </form>
     
       </div>
@@ -95,6 +95,25 @@
         <button class="btn btn-criar-conta" data-js="botao-se-inscrever">
           <a href="#" target="_self" data-js="cont-signup">Sign Up</a>
         </button>
+      </div>
+    </div>
+
+    <div class="box-geral box-recuperar-senha" data-js="box-recuperar-senha">
+      <div class="descricao-recuperar-senha">
+        <h1>Password Reset</h1>
+        <p>Enter your email address and we'll send you instructions on how to reset your password.</p>
+      </div>
+      <div class="box-form box-form-recuperar-senha">
+        <form class="form-recuperar-senha" data-js="form-recuperar-senha">
+          <label for="emailRecuperarSenha">
+            Email
+            <input type="email" id="emailRecuperarSenha" name="user-email" placeholder="Enter email...">
+          </label>
+          <button class="btn btn-recuperar-senha" data-js="botao-recuperar-senha" type="submit">
+              submit
+          </button> 
+          <button class="btn btn-cancelar" data-js="botato-cancelar">cancel</button>
+        </form>
       </div>
     </div>
   </div>

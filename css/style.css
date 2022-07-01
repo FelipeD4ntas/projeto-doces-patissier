@@ -6,6 +6,7 @@
   border: none;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
 }
 
 html {
@@ -43,6 +44,14 @@ body {
 .box-form-login {
   left: 100%;
 }
+
+.box-recuperar-senha {
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 50px;
+  top: 100%;
+}
+
 
 .box-titulo-sign-up {
   margin-top: 50px;
@@ -191,6 +200,12 @@ input {
   flex-direction: column;
 }
 
+.form-recuperar-senha { 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .recuperar-senha {
   text-align: center;
   margin-top: 10px;
@@ -199,4 +214,39 @@ input {
   font-weight: bold;
   font-size: 1.5rem;
   letter-spacing: 1px;
+}
+
+.box-form-recuperar-senha,
+.descricao-recuperar-senha {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.descricao-recuperar-senha h1 {
+  margin-bottom: 15px;
+  font-size: 1.9rem;
+}
+
+.descricao-recuperar-senha p {
+  font-size: 1.5rem;
+  line-height: 25px;
+}
+
+.btn-recuperar-senha {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background: #f4a15d;
+}
+
+.btn-cancelar {
+  background: white;
+  border: none;
+  text-transform: uppercase;
+   font-weight: 600;
 }

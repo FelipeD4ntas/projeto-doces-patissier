@@ -1,15 +1,19 @@
 const btnSeInscrever = document.querySelectorAll('[data-js="botao-se-inscrever"]');
 const btnLogin = document.querySelectorAll('[data-js="botao-login"]');
+const btnEsqueceuSenha = document.querySelector('[data-js="btn-esqueceu-senha"]');
+const btnCancelar = document.querySelector('[data-js="botato-cancelar"]');
 const boxFormSeInscrever = document.querySelector('[data-js="box-form-inscricao"]');
 const boxFormLogin = document.querySelector('[data-js="box-form-login"]');
 const boxPrincipal = document.querySelector('[data-js="box-principal"]');
+const boxRecuperarSenha = document.querySelector('[data-js="box-recuperar-senha"]');
 const formInscricao = document.querySelector('[data-js="form-se-inscrever"]');
 const formLogin = document.querySelector('[data-js="form-login"]');
+const formRecuperarSenha = document.querySelector('[data-js="form-recuperar-senha"]');
 
 let index = 1;
 
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCLRw6P1217lxAUOSx79SUKQZ3REyXdg_w',
@@ -65,6 +69,29 @@ function clicouBtnLogin() {
   }, 500);
 };
 
+function clicouRecuperarSenha() {
+  index = 1
+  index += 3
+ 
+  setTimeout(() => {
+    switch (index) {
+      case 4: 
+        boxRecuperarSenha.style.top = '0%';
+    }
+  }, 500);
+};
+
+function clicouBtnCancelar() {
+  index = 1
+ 
+  setTimeout(() => {
+    switch (index) {
+      case 1: 
+       boxRecuperarSenha.style.top = '100%';
+    }
+  }, 500);
+}
+
 function seIncrever(event) {
   event.preventDefault();
 
@@ -118,6 +145,23 @@ function logar(event) {
     });
 }
 
+function recuperSenha(event) {
+  event.preventDefault();
+  
+  const auth = getAuth();
+  const email = emailRecuperarSenha.value;
+  
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      alert('Email de redefinição de senha enviado. (verifique a caixa de spam).');
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+        alert(errorMessage)
+    });
+}
+
 btnSeInscrever.forEach(btn => {
   btn.addEventListener('click', clicouBtnInscricao);
 });
@@ -126,5 +170,9 @@ btnLogin.forEach(btn => {
   btn.addEventListener('click', clicouBtnLogin);
 })
 
+btnEsqueceuSenha.addEventListener('click', clicouRecuperarSenha);
+btnCancelar.addEventListener('click', clicouBtnCancelar);
+
 formInscricao.addEventListener('submit', seIncrever);
 formLogin.addEventListener('submit', logar)
+formRecuperarSenha.addEventListener('submit', recuperSenha);
