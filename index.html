@@ -15,7 +15,6 @@
 
     <section class="box-btn">
       <button class="btn btn-login" data-js="botao-se-inscrever">
-        <div class="loading" data-js="loading-signup"></div>
         <div class="signup" data-js="cont-signup">
           <img src="assets/imagens/icones/icone-restaurante.svg" alt="icone Menu Restaurante">
           <a href="#" target="_self">Sign up</a>
@@ -23,7 +22,6 @@
       </button>
 
       <button class="btn btn-criar-conta" data-js="botao-login">
-        <div class="loading loading-login" data-js="loading-login"></div>
         <a href="#" target="_self" data-js="cont-login">Log in</a>
       </button>
     </section>
@@ -41,19 +39,19 @@
     </div>
       
     <div class="box-form">
-      <form class="form-se-inscrever">
-        <label for="email">
+      <form class="form-se-inscrever" data-js="form-se-inscrever">
+        <label for="emailInscricao">
           Email
-          <input type="email" id="email" name="user-email" placeholder="Enter email...">
+          <input type="email" id="emailInscricao" name="user-email" placeholder="Enter email...">
         </label>
         
-        <label for="senha">
+        <label for="senhaInscricao">
           Password  
-          <input type="password" id="senha" name="user-password" placeholder="Enter password...">
+          <input type="password" id="senhaInscricao" name="user-password" placeholder="Enter password...">
         </label>
     
         <button type="submit" class="btn btn-criar-conta" data-js="cont-signup">
-          <div class="loading" data-js="loading-signup"></div>
+
           Sign up
         </button>
       </form>
@@ -61,7 +59,6 @@
 
     <div class="box-btn btn-possui-conta">
       <button class="btn btn-criar-conta" data-js="botao-login">
-        <div class="loading loading-login"></div>
         <a href="#" target="_self" data-js="cont-login">Already have an account?</a>
       </button>
     </div>
@@ -79,19 +76,18 @@
     </div>
       
     <div class="box-form">
-      <form class="form-se-inscrever">
-        <label for="email">
+      <form class="form-se-inscrever" data-js="form-login">
+        <label for="emailLogin">
           Email
-          <input type="email" id="email" name="user-email" placeholder="Enter email...">
+          <input type="email" id="emailLogin" name="user-email" placeholder="Enter email...">
         </label>
         
-        <label for="senha">
+        <label for="senhaLogin">
           Password  
-          <input type="password" id="senha" name="user-password" placeholder="Enter password...">
+          <input type="password" id="senhaLogin" name="user-password" placeholder="Enter password...">
         </label>
     
         <button type="submit" class="btn btn-login">
-          <div class="loading loading-login"></div>
           Login
         </button>
         <a href="#" class="recuperar-senha">Forgot Password?</a>
@@ -101,12 +97,11 @@
 
     <div class="box-btn btn-possui-conta">
       <button class="btn btn-criar-conta" data-js="botao-se-inscrever">
-        <div class="loading loading-signup" data-js="loading-signup"></div>
         <a href="#" target="_self" data-js="cont-signup">Sign Up</a>
       </button>
     </div>
   </div>
 
-  <script src="/js/pagina-login.js"></script>
+  <script src="/js/pagina-login.js" type="module"></script>
 </body>
 </html>

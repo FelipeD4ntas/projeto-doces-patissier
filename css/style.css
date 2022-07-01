@@ -163,12 +163,6 @@ body {
   animation: carregando 1s infinite;
 }
 
-.loading-login,
-.loading-signup {
-  width: 9px;
-  height: 9px;
-}
-
 @keyframes carregando {
   to {
     transform: rotate(1turn);
