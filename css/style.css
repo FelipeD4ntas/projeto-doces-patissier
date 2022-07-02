@@ -17,12 +17,14 @@ html {
 body {
   font-size: 1.6rem;
   overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 .box-geral {
   padding: 0 calc((100% - 890px) / 2);
   max-width: 890px;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
