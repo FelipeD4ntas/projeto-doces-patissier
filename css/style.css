@@ -154,6 +154,11 @@ body {
   color: #862924;
 }
 
+.btn-signup a {
+  color: #868686;
+  text-transform: uppercase;
+}
+
 .loading {
   display: none;
   width: 18px;
