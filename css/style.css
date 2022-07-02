@@ -16,6 +16,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  overflow: hidden;
 }
 
 .box-geral {
@@ -154,6 +155,11 @@ body {
   color: #862924;
 }
 
+.btn-signup {
+  background: white;
+  border: 1px solid #e5e5e5;
+}
+
 .btn-signup a {
   color: #868686;
   text-transform: uppercase;
@@ -246,11 +252,13 @@ input {
   margin-bottom: 10px;
   border-radius: 6px;
   background: #f4a15d;
+  color: white;
 }
 
 .btn-cancelar {
   background: white;
   border: none;
   text-transform: uppercase;
-   font-weight: 600;
+  font-weight: 600;
+  color: #868686;
 }
