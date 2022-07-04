@@ -31,7 +31,6 @@ body {
 
 .box-geral {
   padding: 0 calc((100% - 890px) / 2);
-  max-width: 890px;
   height: 100%;
   width: 100%;
   display: flex;
@@ -135,12 +134,16 @@ body {
 
 .btn-login {
   margin-bottom: 15px;
-  text-transform: uppercase;
-  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #f4a15d;
+}
+
+.btn-logar {
+  background: transparent;
+  text-transform: uppercase;
+  color: white;
 }
 
 .signup {

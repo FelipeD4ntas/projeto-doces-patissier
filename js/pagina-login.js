@@ -9,11 +9,12 @@ const boxRecuperarSenha = document.querySelector('[data-js="box-recuperar-senha"
 const formInscricao = document.querySelector('[data-js="form-se-inscrever"]');
 const formLogin = document.querySelector('[data-js="form-login"]');
 const formRecuperarSenha = document.querySelector('[data-js="form-recuperar-senha"]');
+const linkLogin = document.querySelector('[data-js="link-login"]');
 
 let index = 1;
 
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js';
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyCLRw6P1217lxAUOSx79SUKQZ3REyXdg_w',
@@ -106,10 +107,12 @@ function seIncrever(event) {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        alert(`Conta criada com sucesso.`);
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        alert(errorMessage);
       });
     
     return
@@ -122,17 +125,26 @@ function logar(event) {
   event.preventDefault();
   const email = emailLogin.value;
   const password = senhaLogin.value;
-
   const auth = getAuth();
+
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
       console.log(user);
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          const uid = user.uid;
+          
+        } else {
+          console.log('Usuario deslogado')
+        }
+      });
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      
+      console.log(errorMessage)
       if (errorMessage === 'Firebase: Error (auth/user-not-found).') {
         alert('Usuário não encontrado.');
       };
@@ -142,6 +154,9 @@ function logar(event) {
       if (errorMessage === 'Firebase: Error (auth/invalid-email).') {
         alert('Email inválido');
       };
+      if (errorMessage === 'Firebase: Error (auth/internal-error).') {
+        alert('Senha em branco.')
+      }
     });
 }
 
@@ -160,19 +175,16 @@ function recuperSenha(event) {
       const errorMessage = error.message;
         alert(errorMessage)
     });
-}
+};
 
 btnSeInscrever.forEach(btn => {
   btn.addEventListener('click', clicouBtnInscricao);
 });
-
 btnLogin.forEach(btn => {
   btn.addEventListener('click', clicouBtnLogin);
-})
-
+});
 btnEsqueceuSenha.addEventListener('click', clicouRecuperarSenha);
 btnCancelar.addEventListener('click', clicouBtnCancelar);
-
 formInscricao.addEventListener('submit', seIncrever);
 formLogin.addEventListener('submit', logar)
 formRecuperarSenha.addEventListener('submit', recuperSenha);
